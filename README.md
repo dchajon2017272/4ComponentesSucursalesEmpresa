@@ -1,7 +1,7 @@
 # Para Iniciar el Proyecto
 La pagina principal para iniciar el proyecto es el Login, por lo que solo le tendría que poner /login a la ruta localhost...
 
-# SucursalesEmpresa
+## SucursalesEmpresa
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 13.3.0.
 
