@@ -1,4 +1,4 @@
-## Para Iniciar el Proyecto
+# Para Iniciar el Proyecto
 La pagina principal para iniciar el proyecto es el Login, por lo que solo le tendría que poner /login a la ruta localhost...
 
 # SucursalesEmpresa
