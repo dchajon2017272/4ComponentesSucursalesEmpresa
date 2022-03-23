@@ -1,0 +1,258 @@
+<!--<div class="abs-center">
+<div class="col col-lg-14">
+
+<div id="carouselExampleDark" class="carousel carousel-dark slide" data-bs-ride="carousel">
+  <div class="carousel-indicators">
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="1" aria-label="Slide 2"></button>
+    <button type="button" data-bs-target="#carouselExampleDark" data-bs-slide-to="2" aria-label="Slide 3"></button>
+  </div>
+
+  <div class="carousel-inner ">
+    <div class="carousel-item active" data-bs-interval="10000">
+      <div align="center"> <img  src="https://i.ibb.co/pyVw6yX/Sazon-Pizza-Logo.png" class="d-block w-40" alt="Logo Sazon Pizza"></div>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Sazon Pizza</h5>
+        <p>Logo Representativo de la Empresa.</p>
+      </div>
+    </div>
+
+    <div class="carousel-item" data-bs-interval="2000">
+     <div align="center"> <img src="https://w6h5a5r4.rocketcdn.me/wp-content/uploads/2019/06/pizza-con-chorizo-jamon-y-queso-1080x671.jpg" class="d-block w-30" class="imagen" alt="..."></div>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Second slide label</h5>
+        <p>Some representative placeholder content for the second slide.</p>
+      </div>
+    </div>
+    <div class="carousel-item">
+      <div align="center"><img src="https://www.saborusa.com/wp-content/uploads/2019/10/Animate-a-disfrutar-una-deliciosa-pizza-de-salchicha-Foto-destacada.png" class="d-block w-30" alt="..."></div>
+      <div class="carousel-caption d-none d-md-block">
+        <h5>Third slide label</h5>
+        <p>Some representative placeholder content for the third slide.</p>
+      </div>
+    </div>
+
+  </div>
+
+  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="prev">
+    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Previous</span>
+  </button>
+  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleDark" data-bs-slide="next">
+    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+    <span class="visually-hidden">Next</span>
+  </button>
+</div>
+</div>
+</div>-->
+
+<nav class="navbar navbar-light bg-danger fixed-top">
+  <div class="container-fluid">
+    <a class="navbar-brand"routerLink="/dashboard" style="color: white;">Dashboard</a>
+    
+    <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+      <div class="offcanvas-header">
+        <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Sazon Pizza</h5>
+        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+      </div>
+      <div class="offcanvas-body">
+        <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+          <li class="nav-item">
+            <a class="nav-link active" aria-current="page" routerLink="/dashboard">Dashboard</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" routerLink="/pagina-inicio">Inicio</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  routerLink="/login">Cerrar Sesión</a>
+          </li>
+          <li class="nav-item dropdown">
+
+          </li>
+        </ul>
+        <form class="d-flex">
+          <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+          <button class="btn btn-outline-success" type="submit">Search</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</nav>
+
+<div class="container">
+  <div class="row row-cols-3">
+    <div class="col"><div class="card" style="width: 18rem;">
+      <img src="https://i.ibb.co/pyVw6yX/Sazon-Pizza-Logo.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sucursal Central</h5>
+        <p class="card-text">Sucursal central de Sazon Pizza.</p>
+        <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal">Más Información</a>
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sucursal Central</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body ">
+               Sucursal principal de Sazon Pizza, quien fue la encargada de dar inicio a una serie de sucursales
+               abiertas hacia todo publico.
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <div class="col"><div class="card mb-5" style="width: 18rem;">
+      <img src="https://www.eluniverso.com/resizer/5N9j1EK0-8MMn30GXOMaL_y6GMI=/809x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/M7ROUAC34ZCI7AU3WN7GF4TAUY.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sucursal Sur</h5>
+        <p class="card-text">Sucursal sur de Sazon Pizza.</p>
+        <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal1">Más Información</a>
+        <div class="modal fade " id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sucursal Sur</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+               La segunda sucursal que se abrió al publico de esta empresa, una de las más queridas por el publico,
+               puesto que la mayor parte de nuestros clientes son de la zona Sur.
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <br>
+    <div class="col"><div class="card" style="width: 18rem;">
+      <img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/5802fab5-fdce-468a-a830-43e8001f5a72/Derivates/c00dc34a-e73d-42f0-a86e-e2fd967d33fe.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sucursal Norte</h5>
+        <p class="card-text">Sucursal norte de Sazon Pizza</p>
+        <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal2">Más Información</a>
+        <div class="modal fade " id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sucursal Norte</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body ">
+               Sucursal Norte, la 3ra sucursal en abrir, esta suele ser más pequeña ya que estamos en una región en
+               donde suelen ser más elegantes, ellos son la razón del por qué el logo Alternativo.
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+    <br>
+    <div class="col"><div class="card" style="width: 18rem;">
+      <img src="https://www.cuerpomente.com/medio/2021/02/24/pizza-sin-gluten-de-polenta_533a4118_900x835.jpg " class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sucursal del Este</h5>
+        <p class="card-text">Sucursal del este de Sazon Pizza</p>
+        <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal3">Más Información</a>
+        <div class="modal fade " id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sucursal del Este</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body ">
+               No hay mucho por decir de dicha sucursal.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+    <br>
+    <div class="col"><div class="card" style="width: 18rem;">
+      <img src="https://zeferinos.com/wp-content/uploads/2017/06/bolo%C3%B1esa.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sucursal Sur 2</h5>
+        <p class="card-text">2da Sucursal en el Sur de Sazon Pizza</p>
+        <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal4">Más Información</a>
+        <div class="modal fade " id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sucursal Sur 2</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body ">
+               Como se mencionó con anterioridad, en esta parte es en dónde nuestros clientes se juntan por montón,
+               debido a ello tuvimos que abrir una segunda sucursal cerca de la primera. 
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+    <br>
+    <div class="col mb-5"><div class="card" style="width: 18rem;">
+      <img src="https://www.simplyrecipes.com/thmb/1KOEQ0SPZNXwU0pUXUDdAm6Z7xo=/2001x2001/smart/filters:no_upscale()/Simply-Recipes-Homemade-Pizza-Dough-Lead-Shot-1c-c2b1885d27d4481c9cfe6f6286a64342.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sucursal del Oeste</h5>
+        <p class="card-text">Sucursal del Oeste de Sazon Pizza</p>
+        <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal5">Más Información</a>
+        <div class="modal fade " id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sucursal del Oeste</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body ">
+               La ultima de muchas más que aspiramos a seguir abriendo al publico.
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+  </div>
+</div>
+<div class="footer d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-8 px-5 px-xl-5 bg-danger">
+  <!-- Copyright -->
+  <div class="asado text-white mb-3 mb-md-0 ">
+    Copyright © 2022. Todos los derechos reservados por el grupo 3.
+  </div>

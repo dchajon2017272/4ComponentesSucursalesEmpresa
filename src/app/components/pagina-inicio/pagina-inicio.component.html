@@ -1,0 +1,163 @@
+
+<nav class="navbar navbar-light bg-danger ">
+    <div class="container-fluid">
+      <a class="navbar-brand"routerLink="/pagina-inicio" style="color: white;">Inicio</a>
+      
+      <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
+        <div class="offcanvas-header">
+          <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Sazon Pizza</h5>
+          <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+        </div>
+        <div class="offcanvas-body">
+          <ul class="navbar-nav justify-content-end flex-grow-1 pe-3">
+            <li class="nav-item">
+              
+              <a class="nav-link active" routerLink="/pagina-inicio">Inicio</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link " aria-current="page" routerLink="/dashboard">Dashboard</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link"  routerLink="/login">Cerrar Sesión</a>
+            </li>
+            <li class="nav-item dropdown">
+  
+            </li>
+          </ul>
+          <form class="d-flex">
+            <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
+            <button class="btn btn-outline-success" type="submit">Buscar</button>
+          </form>
+        </div>
+      </div>
+    </div>
+  </nav>
+  
+    <div id="myCarousel" class="carousel slide  mb-5" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+          <button type="button" data-bs-target="#myCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+             <div align="center"> <img src="https://i.ibb.co/WBrkMM4/pizza.png" width="100%" height="100%" class="imagen" alt="..."></div>
+            <div class="container">
+               
+              <div class="carousel-caption" style="background-color: black; opacity: 90%;">
+                 
+                <h1>Pizzas Tradicionales</h1>
+                <p style="color: white; text-decoration: solid; ">De todo tipo de pizzas tradicionales, ya sean de jamón, peperroni o queso.</p>
+                <p><a class="btn btn-lg btn-danger" >Pedir en Línea</a></p>
+            
+              </div>
+            
+            </div>
+          </div>
+          <div class="carousel-item">
+            <div align="center"> <img src="https://i.ibb.co/4KG6My8/Pizza3.jpg" width="100%" height="100%" class="imagen" alt="..."></div>    
+            
+           <div class="container">
+              <div class="carousel-caption" style="background-color: black; opacity: 90%;">
+                <h1>¡Abrimos nuevas sucursales!</h1>
+                <p>Ahora contamos con muchas más sucursales, dales un vistazo yendo al Dashboard.</p>
+                <p><a class="btn btn-lg btn-danger" routerLink="/dashboard">Ir al Dashboard</a></p>
+              </div>
+            </div>
+          </div>
+          <div class="carousel-item" >
+            <div align="center"> <img src="https://i.ibb.co/3z1v3hs/pizza2.jpg" width="100%" height="100%" class="imagen" alt="..."></div>    
+            <div class="container">
+              <div class="carousel-caption" style="background-color: black; opacity: 90%;">
+                <h1>¿Te apetece una pizza con pimientos?</h1>
+                <p>¿Qué estas esperando? !Pidela ya!</p>
+                <p><a class="btn btn-lg btn-danger" >Pedir en Línea</a></p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#myCarousel" data-bs-slide="prev">
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#myCarousel" data-bs-slide="next">
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    
+    
+      <!-- Marketing messaging and featurettes
+      ================================================== -->
+      <!-- Wrap the rest of the page in another container to center all the content. -->
+    
+      <div class="container marketing">
+    
+        <!-- Three columns of text below the carousel -->
+        <div class="row">
+          <div class="col col-lg-4 mx-auto">
+            <div align="center"> <img src="https://img.freepik.com/vector-gratis/diseno-logo-pizza_9845-319.jpg" class="imagen bd-placeholder-img rounded-circle"  width="170" height="150" alt="..."></div>    
+
+            <h2>Logo de Inicio</h2>
+            <p>Este fue el primer logo que representó a nuestra pizzeria, al ser principiantes el logo fue sacado de internet.</p>
+            <p><a class="btn btn-danger" >Detalles &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <div align="center"> <img src="https://i.ibb.co/pyVw6yX/Sazon-Pizza-Logo.png" width="170" height="150" class="imagen" alt="..."></div>    
+
+            <h2>Logo Actual</h2>
+            <p>Luego de un tiempo llegando a ser más experimentados nos dimos cuenta de la necesidad de un nuevo logo creado por nosotros.</p>
+            <p><a class="btn btn-danger" >Detalles &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+          <div class="col-lg-4">
+            <div align="center"> <img src="https://i.ibb.co/2Ky2vxV/Sazon-Pizza3.png" width="170" height="150" class="imagen" alt="..."></div>    
+
+            <h2>Logo Alternativo</h2>
+            <p>Un logo Alternativo utilizado principalmente en situaciones en donde la elegancia sea requerida y aceptada.</p>
+            <p><a class="btn btn-danger" >Detalles &raquo;</a></p>
+          </div><!-- /.col-lg-4 -->
+        </div><!-- /.row -->
+    
+    
+        <!-- START THE FEATURETTES -->
+    
+        <hr class="featurette-divider mb-5">
+    
+        <div class="row featurette mb-5">
+          <div class="col-md-7 ">
+            <h2 class="featurette-heading">¿Quienes Somos? <span class="text-muted">O quienes queremos ser.</span></h2>
+            <p class="lead">Somos una empresa que se dedica a dar felicidad a Guatemala a base de la comida italiana teniendo en cuenta
+                el amor y el sazon que se tiene y nos resalta de las demas marcas.</p>
+          </div>
+          <div class="col-md-5">
+            <div align="center"> <img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/5802fab5-fdce-468a-a830-43e8001f5a72/Derivates/c00dc34a-e73d-42f0-a86e-e2fd967d33fe.jpg" width="450" height="400" class="imagen" alt="..."></div>    
+
+          </div>
+        </div>
+    
+        <hr class="featurette-divider mb-5">
+    
+        <div class="row featurette mb-5">
+          <div class="col-md-7 order-md-2">
+            <h2 class="featurette-heading">¿Quieres aprender a cocinar Pizza? <span class="text-muted">Ve nuestros Tutoriales   </span></h2>
+            <p class="lead">Hacemos tutoriales para poder cocinar pizza y los subimos a distintos medios de comunicación para que todos tengan acceso a estos. También damos clases pagadas para quienes quieran aprender de una manera más detallada y ser un Sazon Expert!</p>
+            <p><a class="btn btn-danger" >Más Información &raquo;</a></p>
+        </div>
+          <div class="col-md-5 order-md-1">
+            <div align="center"> <img src="https://cdn.shopify.com/s/files/1/0205/9582/articles/20220211142347-margherita-9920_ba86be55-674e-4f35-8094-2067ab41a671.jpg?crop=center&height=800&v=1644590192&width=800" width="450" height="420" class="imagen" alt="..."></div>    
+    
+          </div>
+        </div>
+    
+        
+        
+    
+      </div>
+      <div class="footer d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-8 px-5 px-xl-5 bg-danger">
+        <!-- Copyright -->
+        <div class="asado text-white mb-3 mb-md-0 ">
+          Copyright © 2022. Todos los derechos reservados por el grupo 3.
+        </div>
