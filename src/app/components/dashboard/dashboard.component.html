@@ -83,29 +83,39 @@
 </nav>
 
 <!--Aqui estan las Card-->
+
+
+
 <div class="container">
+  <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar  Empresa</a>
   <div class="row row-cols-3">
-    <div class="col"><div class="card" style="width: 18rem;">
+    <div class="col"><div class="card" style="width: 18rem;" >
       <img src="https://i.ibb.co/pyVw6yX/Sazon-Pizza-Logo.png" class="card-img-top" alt="...">
       <div class="card-body">
         <h5 class="card-title">Sucursal Central</h5>
         <p class="card-text">Sucursal central de Sazon Pizza.</p>
-        <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal">Más Información</a>
+        <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal1.1">Más Información</a>
         <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog modal-dialog-scrollable">
             <div class="modal-content">
               <div class="modal-header">
-                <h5 class="modal-title" id="exampleModalLabel">Sucursal Central</h5>
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Empresa</h5>
                 <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
               </div>
               <div class="modal-body ">
-               Sucursal principal de Sazon Pizza, quien fue la encargada de dar inicio a una serie de sucursales
-               abiertas hacia todo publico.
-                
+                <label for="inputNombre" class="form-label">Nombre</label>
+                <br>
+                <input type="text" class="form-control" id="inputNombre" name="nombre" #nombre="ngModel" [(ngModel)]="empresaModelPost._nombre">
+                <br>
+                <label for="inputemail" class="form-label">Email</label>
+                <input type="text" class="form-control" id="inputemail" name="Email" #email="ngModel" [(ngModel)]="empresaModelPost._email">
+                <br>
+                <label for="inputTipoEmpresa" class="form-label">Tipo de la Empresa</label>
+                <input type="text" class="form-control" id="inputTipoEmpresa" name="tipoEmpresa" #tipoEmpresa="ngModel" [(ngModel)]="empresaModelPost._tipoEmpresa">
               </div>
               <div class="modal-footer">
                 <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
-                
+                <button type="button" class="btn btn-primary" (click)="postEmpresas()">Guardar Cambios</button>
               </div>
             </div>
           </div>
