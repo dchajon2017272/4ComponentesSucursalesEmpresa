@@ -53,6 +53,20 @@ export class DashboardComponent implements OnInit {
     )
 
   }
+    deleteEmpresas(idEmpresa: String){
+      this._empresaService.eliminarEmpresa(idEmpresa).subscribe(
+        (response)=>{
+          console.log(response);
+          this.getEmpresas();
+
+        },
+        (error)=>{
+          console.log(<any>error);
+        }
+      )
+
+    }
+
 }
 
 

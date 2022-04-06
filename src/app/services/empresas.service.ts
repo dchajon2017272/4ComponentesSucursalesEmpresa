@@ -22,5 +22,10 @@ export class EmpresasService {
 
     return this._http.post(this.url + '/agregarEmpresas', parametros, {headers:this.headersVariable})
   }
+
+  eliminarEmpresa(id: String): Observable<any>{
+
+    return this._http.delete(this.url + '/eliminarEmpresa/' +id ,{  headers: this.headersVariable })
+  }
   
 }

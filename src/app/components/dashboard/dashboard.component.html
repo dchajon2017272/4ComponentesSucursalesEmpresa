@@ -87,6 +87,8 @@
 
 
 <div class="container">
+  <br>
+  <br>
   <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar  Empresa</a>
   <div class="row row-cols-3">
     <div class="col"><div class="card" style="width: 18rem;" >
@@ -94,6 +96,12 @@
       <div class="card-body">
         <h5 class="card-title">Sucursal Central</h5>
         <p class="card-text">Sucursal central de Sazon Pizza.</p>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-danger">Eliminar</button>
+          <button type="button" class="btn btn-warning">Editar</button>
+        </div>
+        <br>
+        <br>
         <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal1.1">Más Información</a>
         <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog modal-dialog-scrollable">
@@ -128,6 +136,12 @@
       <div class="card-body">
         <h5 class="card-title">Sucursal Sur</h5>
         <p class="card-text">Sucursal sur de Sazon Pizza.</p>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-danger">Eliminar</button>
+          <button type="button" class="btn btn-warning" data-bs-toggle="modal"(click)="postEmpresas">Editar</button>
+        </div>
+        <br>
+        <br>
         <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal1">Más Información</a>
         <div class="modal fade " id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog modal-dialog-scrollable">
@@ -157,6 +171,12 @@
       <div class="card-body">
         <h5 class="card-title">Sucursal Norte</h5>
         <p class="card-text">Sucursal norte de Sazon Pizza</p>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-danger">Eliminar</button>
+          <button type="button" class="btn btn-warning"  data-bs-toggle="modal"(click)="postEmpresas">Editar</button>
+        </div>
+        <br>
+        <br>
         <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal2">Más Información</a>
         <div class="modal fade " id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog modal-dialog-scrollable">
@@ -185,6 +205,12 @@
       <div class="card-body">
         <h5 class="card-title">Sucursal del Este</h5>
         <p class="card-text">Sucursal del este de Sazon Pizza</p>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-danger">Eliminar</button>
+          <button type="button" class="btn btn-warning"  data-bs-toggle="modal"(click)="postEmpresas">Editar</button>
+        </div>
+        <br>
+        <br>
         <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal3">Más Información</a>
         <div class="modal fade " id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog modal-dialog-scrollable">
@@ -211,6 +237,13 @@
       <div class="card-body">
         <h5 class="card-title">Sucursal Sur 2</h5>
         <p class="card-text">2da Sucursal en el Sur de Sazon Pizza</p>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-danger">Eliminar</button>
+          <button type="button" class="btn btn-warning"  data-bs-toggle="modal"(click)="postEmpresas">Editar</button>
+          
+                </div>
+        <br>
+        <br>
         <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal4">Más Información</a>
         <div class="modal fade " id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog modal-dialog-scrollable">
@@ -239,6 +272,12 @@
       <div class="card-body">
         <h5 class="card-title">Sucursal del Oeste</h5>
         <p class="card-text">Sucursal del Oeste de Sazon Pizza</p>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-danger">Eliminar</button>
+          <button type="button" class="btn btn-warning"  data-bs-toggle="modal"(click)="postEmpresas">Editar</button>
+        </div>
+        <br>
+        <br>
         <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal5">Más Información</a>
         <div class="modal fade " id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
           <div class="modal-dialog modal-dialog modal-dialog-scrollable">
@@ -269,3 +308,4 @@
   </div>
 
   <!--Te las deje sin nada que cambiar para que te guíes mejor, solo borras y ya.-->
+  <!-- FALTA AGREGARLE EL CLICK A el de eliminar-->
