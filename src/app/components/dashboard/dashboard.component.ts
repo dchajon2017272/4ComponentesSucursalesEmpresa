@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Empresa } from 'src/app/models/empresa.models';
 import { EmpresasService } from 'src/app/services/empresas.service';
 
@@ -10,15 +10,19 @@ import { EmpresasService } from 'src/app/services/empresas.service';
   
 })
 export class DashboardComponent implements OnInit {
+
+
   public empresaModelGet: Empresa;
   public empresaModelPost: Empresa;
+  public empresaModelGetId: Empresa;
 
+  public token;
 
   constructor(private _empresaService: EmpresasService) {
-    this.empresaModelPost = new Empresa('','','','','','',0,'');
+    this.empresaModelPost = new Empresa('','','','','','');
+    this.empresaModelGetId = new Empresa('','','','','','');
 
-
-
+    this.token = this._empresaService.obtenerToken();
    }
 
   
@@ -26,11 +30,12 @@ export class DashboardComponent implements OnInit {
     this.getEmpresas();
 
   }
+  
   getEmpresas() {
     
-    this._empresaService.obtenerEmpresas().subscribe(
+    this._empresaService.obtenerEmpresas(this.token).subscribe(
       (response)=>{
-        this.empresaModelGet = response.empresa;
+        this.empresaModelGet = response.empresas;
         console.log(this.empresaModelGet);
 
       },
@@ -52,6 +57,47 @@ export class DashboardComponent implements OnInit {
       }
     )
 
+  }
+
+  getEmpresaId(idEmpresa){
+    this._empresaService.obtenerEmpresaId(idEmpresa).subscribe(
+      (response) => {
+
+        this.empresaModelGetId = response.empresa;
+        console.log(this.empresaModelGetId);
+      },
+      (error)=>{
+        console.log(<any>error);
+
+      }
+    )
+  }
+
+  putEmpresas(){
+    this._empresaService.editarEmpresa(this.empresaModelGetId).subscribe(
+      (response)=>{
+        
+        console.log(response);
+        this.getEmpresas()
+      },
+      (error)=>{
+        console.log(<any>error);
+
+      }
+    )
+  }
+
+  deleteEmpresas(idEmpresa) {
+    this._empresaService.eliminarEmpresa(idEmpresa).subscribe(
+      (response)=>{
+        console.log(response);
+        this.getEmpresas();
+      },
+      (error)=>{
+        console.log(<any>error);
+
+      }
+    )
   }
 }
 
