@@ -15,6 +15,7 @@ export class DashboardComponent implements OnInit {
   public empresaModelGet: Empresa;
   public empresaModelPost: Empresa;
   public empresaModelGetId: Empresa;
+  public identidad = localStorage.getItem('identidad');
 
   public token;
 
@@ -62,9 +63,9 @@ export class DashboardComponent implements OnInit {
   getEmpresaId(idEmpresa){
     this._empresaService.obtenerEmpresaId(idEmpresa).subscribe(
       (response) => {
-
+        console.log(response);
         this.empresaModelGetId = response.empresa;
-        console.log(this.empresaModelGetId);
+
       },
       (error)=>{
         console.log(<any>error);
@@ -72,6 +73,7 @@ export class DashboardComponent implements OnInit {
       }
     )
   }
+  
 
   putEmpresas(){
     this._empresaService.editarEmpresa(this.empresaModelGetId).subscribe(

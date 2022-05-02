@@ -9,6 +9,7 @@ import { RegistroComponent } from './components/registro/registro.component';
 import { PaginaInicioComponent } from './components/pagina-inicio/pagina-inicio.component';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule } from '@angular/forms';
+import { VerEmpresasComponent } from './components/ver-empresas/ver-empresas.component';
 
 @NgModule({
   declarations: [
@@ -17,12 +18,13 @@ import { FormsModule } from '@angular/forms';
     LoginComponent,
     RegistroComponent,
     PaginaInicioComponent,
+    VerEmpresasComponent
 
 
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule,
+    AppRoutingModule, 
     HttpClientModule,
     FormsModule
   ],

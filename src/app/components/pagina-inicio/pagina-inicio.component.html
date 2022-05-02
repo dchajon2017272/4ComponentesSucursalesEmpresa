@@ -2,10 +2,12 @@
 <nav class="navbar navbar-light bg-danger ">
     <div class="container-fluid">
       <a class="navbar-brand"routerLink="/pagina-inicio" style="color: white;">Inicio</a>
-      
+      <a class="nav-link disabled">{{identidad.nombre}}</a>
       <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar">
         <span class="navbar-toggler-icon"></span>
       </button>
+      
+
       <div class="offcanvas offcanvas-end " tabindex="-1" id="offcanvasNavbar" aria-labelledby="offcanvasNavbarLabel">
         <div class="offcanvas-header">
           <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Sazon Pizza</h5>
@@ -26,6 +28,7 @@
             <li class="nav-item dropdown">
   
             </li>
+            
           </ul>
           <form class="d-flex">
             <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Buscar">
