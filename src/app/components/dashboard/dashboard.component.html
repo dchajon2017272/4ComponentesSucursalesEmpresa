@@ -108,6 +108,7 @@
             aria-controls="offcanvasExample" (click)="getEmpresaId(empr._id)">
               Editar
             </button>
+            <button type="button" class="btn btn-success" [routerLink]="['/verEmpresas',empr._id]">Ver</button>
         </div>
        
       </div>
@@ -194,12 +195,12 @@
       </div>
       <div class="mb-3">
         <label for="inputTipoEmpresa" class="form-label">Tipo de Empresa</label>
-        <input type="text" class="form-control" id="inputTipoEmpresa" name="_tipoEmpresa" #tipoEmpresa="ngModel"
+        <input type="text" class="form-control" id="inputTipoEmpresa" name="tipoEmpresa" #tipoEmpresa="ngModel"
         [(ngModel)]="empresaModelGetId.tipoEmpresa">
       
     
     </div>
-    <button type="button" class="btn btn-success" data-bs-dismiss="offcanvas" (click)="putEmpresas()">Editar Empresa</button>
+    <button type="button" class="btn btn-success"  (click)="putEmpresas()" data-bs-dismiss="offcanvas">Editar Empresa</button>
 
     </form>
   </div>

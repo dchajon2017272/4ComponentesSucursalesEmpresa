@@ -69,7 +69,7 @@ export class EmpresasService {
   editarEmpresa(modeloEmpresa: Empresa): Observable<any> {
     let parametros = JSON.stringify(modeloEmpresa);
 
-    return this._http.put(this.url + '/editarEmpresa/' + modeloEmpresa.id, parametros, {headers: this.headersVariable})
+    return this._http.put(this.url + '/editarEmpresa/' + modeloEmpresa._id, parametros, {headers: this.headersVariable})
   }
 
   eliminarEmpresa(id : String): Observable<any> {
