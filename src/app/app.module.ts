@@ -13,6 +13,7 @@ import { FormsModule } from '@angular/forms';
 import { VerEmpresasComponent } from './components/ver-empresas/ver-empresas.component';
 import { ProductosComponent } from './components/productos/productos.component';
 import { NavBarComponent } from './components/nav-bar/nav-bar.component';
+import { ActualizarUsuarioComponent } from './components/actualizar-usuario/actualizar-usuario.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +24,8 @@ import { NavBarComponent } from './components/nav-bar/nav-bar.component';
     PaginaInicioComponent,
     VerEmpresasComponent,
     ProductosComponent,
-    NavBarComponent
+    NavBarComponent,
+    ActualizarUsuarioComponent
 
 
   ],
