@@ -86,6 +86,7 @@
 
 
 <div class="container">
+<<<<<<< HEAD
   <!-- Button Abrir Modal Agregar Producto -->
   <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modalAgregarProducto">
     Agregar Empresa
@@ -96,6 +97,48 @@
       <div class="card text-center mb-3">
         <div class="card-header">
           {{ empr._id }}
+=======
+  <br>
+  <br>
+  <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal">Agregar  Empresa</a>
+  <div class="row row-cols-3">
+    <div class="col"><div class="card" style="width: 18rem;" >
+      <img src="https://i.ibb.co/pyVw6yX/Sazon-Pizza-Logo.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sucursal Central</h5>
+        <p class="card-text">Sucursal central de Sazon Pizza.</p>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-danger">Eliminar</button>
+          <button type="button" class="btn btn-warning">Editar</button>
+        </div>
+        <br>
+        <br>
+        <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal1.1">Más Información</a>
+        <div class="modal fade " id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Agregar Empresa</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body ">
+                <label for="inputNombre" class="form-label">Nombre</label>
+                <br>
+                <input type="text" class="form-control" id="inputNombre" name="nombre" #nombre="ngModel" [(ngModel)]="empresaModelPost._nombre">
+                <br>
+                <label for="inputemail" class="form-label">Email</label>
+                <input type="text" class="form-control" id="inputemail" name="Email" #email="ngModel" [(ngModel)]="empresaModelPost._email">
+                <br>
+                <label for="inputTipoEmpresa" class="form-label">Tipo de la Empresa</label>
+                <input type="text" class="form-control" id="inputTipoEmpresa" name="tipoEmpresa" #tipoEmpresa="ngModel" [(ngModel)]="empresaModelPost._tipoEmpresa">
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                <button type="button" class="btn btn-primary" (click)="postEmpresas()">Guardar Cambios</button>
+              </div>
+            </div>
+          </div>
+>>>>>>> 5df014e2d8da5ebdcfc39b25df8a14176d58d0f5
         </div>
         <div class="card-body">
           <h5 class="card-title">{{empr.nombre}}</h5>
@@ -114,7 +157,179 @@
       </div>
       
     </div>
+<<<<<<< HEAD
     
+=======
+  </div>
+    <div class="col"><div class="card mb-5" style="width: 18rem;">
+      <img src="https://www.eluniverso.com/resizer/5N9j1EK0-8MMn30GXOMaL_y6GMI=/809x670/smart/filters:quality(70)/cloudfront-us-east-1.images.arcpublishing.com/eluniverso/M7ROUAC34ZCI7AU3WN7GF4TAUY.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sucursal Sur</h5>
+        <p class="card-text">Sucursal sur de Sazon Pizza.</p>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-danger">Eliminar</button>
+          <button type="button" class="btn btn-warning" data-bs-toggle="modal"(click)="postEmpresas">Editar</button>
+        </div>
+        <br>
+        <br>
+        <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal1">Más Información</a>
+        <div class="modal fade " id="exampleModal1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sucursal Sur</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body">
+               La segunda sucursal que se abrió al publico de esta empresa, una de las más queridas por el publico,
+               puesto que la mayor parte de nuestros clientes son de la zona Sur.
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+    <br>
+    <div class="col"><div class="card" style="width: 18rem;">
+      <img src="https://assets.tmecosys.com/image/upload/t_web767x639/img/recipe/ras/Assets/5802fab5-fdce-468a-a830-43e8001f5a72/Derivates/c00dc34a-e73d-42f0-a86e-e2fd967d33fe.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sucursal Norte</h5>
+        <p class="card-text">Sucursal norte de Sazon Pizza</p>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-danger">Eliminar</button>
+          <button type="button" class="btn btn-warning"  data-bs-toggle="modal"(click)="postEmpresas">Editar</button>
+        </div>
+        <br>
+        <br>
+        <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal2">Más Información</a>
+        <div class="modal fade " id="exampleModal2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sucursal Norte</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body ">
+               Sucursal Norte, la 3ra sucursal en abrir, esta suele ser más pequeña ya que estamos en una región en
+               donde suelen ser más elegantes, ellos son la razón del por qué el logo Alternativo.
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+    <br>
+    <div class="col"><div class="card" style="width: 18rem;">
+      <img src="https://www.cuerpomente.com/medio/2021/02/24/pizza-sin-gluten-de-polenta_533a4118_900x835.jpg " class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sucursal del Este</h5>
+        <p class="card-text">Sucursal del este de Sazon Pizza</p>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-danger">Eliminar</button>
+          <button type="button" class="btn btn-warning"  data-bs-toggle="modal"(click)="postEmpresas">Editar</button>
+        </div>
+        <br>
+        <br>
+        <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal3">Más Información</a>
+        <div class="modal fade " id="exampleModal3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sucursal del Este</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body ">
+               No hay mucho por decir de dicha sucursal.
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+    <br>
+    <div class="col"><div class="card" style="width: 18rem;">
+      <img src="https://zeferinos.com/wp-content/uploads/2017/06/bolo%C3%B1esa.png" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sucursal Sur 2</h5>
+        <p class="card-text">2da Sucursal en el Sur de Sazon Pizza</p>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-danger">Eliminar</button>
+          <button type="button" class="btn btn-warning"  data-bs-toggle="modal"(click)="postEmpresas">Editar</button>
+          
+                </div>
+        <br>
+        <br>
+        <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal4">Más Información</a>
+        <div class="modal fade " id="exampleModal4" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sucursal Sur 2</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body ">
+               Como se mencionó con anterioridad, en esta parte es en dónde nuestros clientes se juntan por montón,
+               debido a ello tuvimos que abrir una segunda sucursal cerca de la primera. 
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+    <br>
+    <div class="col mb-5"><div class="card" style="width: 18rem;">
+      <img src="https://www.simplyrecipes.com/thmb/1KOEQ0SPZNXwU0pUXUDdAm6Z7xo=/2001x2001/smart/filters:no_upscale()/Simply-Recipes-Homemade-Pizza-Dough-Lead-Shot-1c-c2b1885d27d4481c9cfe6f6286a64342.jpg" class="card-img-top" alt="...">
+      <div class="card-body">
+        <h5 class="card-title">Sucursal del Oeste</h5>
+        <p class="card-text">Sucursal del Oeste de Sazon Pizza</p>
+        <div class="btn-group" role="group" aria-label="Basic mixed styles example">
+          <button type="button" class="btn btn-danger">Eliminar</button>
+          <button type="button" class="btn btn-warning"  data-bs-toggle="modal"(click)="postEmpresas">Editar</button>
+        </div>
+        <br>
+        <br>
+        <a class="btn btn-danger " data-bs-toggle="modal" data-bs-target="#exampleModal5">Más Información</a>
+        <div class="modal fade " id="exampleModal5" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+          <div class="modal-dialog modal-dialog modal-dialog-scrollable">
+            <div class="modal-content">
+              <div class="modal-header">
+                <h5 class="modal-title" id="exampleModalLabel">Sucursal del Oeste</h5>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+              </div>
+              <div class="modal-body ">
+               La ultima de muchas más que aspiramos a seguir abriendo al publico.
+                
+              </div>
+              <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Cerrar</button>
+                
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div></div>
+>>>>>>> 5df014e2d8da5ebdcfc39b25df8a14176d58d0f5
   </div>
 </div>
 
@@ -206,8 +421,13 @@
   </div>
   </div>
 
+<<<<<<< HEAD
 <div class="footer d-flex flex-column flex-md-row text-center text-md-start justify-content-between py-8 px-5 px-xl-5 bg-danger">
   <div class="asado text-white mb-3 mb-md-0 ">
     Copyright © 2022. Todos los derechos reservados por el grupo 3.
 </div>
 
+=======
+  <!--Te las deje sin nada que cambiar para que te guíes mejor, solo borras y ya.-->
+  <!-- FALTA AGREGARLE EL CLICK A el de eliminar-->
+>>>>>>> 5df014e2d8da5ebdcfc39b25df8a14176d58d0f5

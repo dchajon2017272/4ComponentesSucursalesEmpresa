@@ -59,6 +59,7 @@ export class DashboardComponent implements OnInit {
     )
 
   }
+<<<<<<< HEAD
 
   getEmpresaId(idEmpresa){
     this._empresaService.obtenerEmpresaId(idEmpresa).subscribe(
@@ -101,6 +102,22 @@ export class DashboardComponent implements OnInit {
       }
     )
   }
+=======
+    deleteEmpresas(idEmpresa: String){
+      this._empresaService.eliminarEmpresa(idEmpresa).subscribe(
+        (response)=>{
+          console.log(response);
+          this.getEmpresas();
+
+        },
+        (error)=>{
+          console.log(<any>error);
+        }
+      )
+
+    }
+
+>>>>>>> 5df014e2d8da5ebdcfc39b25df8a14176d58d0f5
 }
 
 

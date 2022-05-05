@@ -60,6 +60,7 @@ export class EmpresasService {
     return this._http.post(this.url + '/agregarEmpresas', parametros, {headers:this.headersVariable})
   }
 
+<<<<<<< HEAD
   obtenerEmpresaId(id : String): Observable<any> {
 
     return this._http.get(this.url + '/empresas/' + id, { headers: this.headersVariable })
@@ -76,4 +77,11 @@ export class EmpresasService {
 
     return this._http.delete(this.url + '/eliminarEmpresa/' + id, { headers: this.headersVariable })
   }
+=======
+  eliminarEmpresa(id: String): Observable<any>{
+
+    return this._http.delete(this.url + '/eliminarEmpresa/' +id ,{  headers: this.headersVariable })
+  }
+  
+>>>>>>> 5df014e2d8da5ebdcfc39b25df8a14176d58d0f5
 }
