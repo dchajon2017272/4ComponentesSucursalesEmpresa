@@ -2,6 +2,7 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders}from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Productos } from '../models/productos.models';
+import { environment } from 'src/environments/environment';
 
 @Injectable({
   providedIn: 'root'
@@ -10,7 +11,11 @@ export class ProductosService {
   public url: String = 'http://localhost:3000/api';
   public headersVariable = new HttpHeaders().set('Content-Type', 'application/json');
   public token;
-
+  public headersToken = new HttpHeaders({
+    'Content-Type': 'application/json',
+    'Authorization': this.obtenerToken()
+  })
+  
   constructor(public _http: HttpClient) { }
 
   obtenerToken(){
@@ -34,12 +39,17 @@ export class ProductosService {
 agregarProductos(modeloProductos: Productos): Observable<any>{
   let parametros = JSON.stringify(modeloProductos);
 
-  return this._http.post(this.url + '/agregarProducto', parametros, {headers:this.headersVariable})
+  return this._http.post(this.url + '/agregarProducto', parametros, {headers:this.headersToken})
 }
 
 obtenerProductosId(id : String): Observable<any> {
 
   return this._http.get(this.url + '/productos/' + id, { headers: this.headersVariable })
+}
+
+obtenerProductosIdEmpresa(idEmpresa : String): Observable<any> {
+
+  return this._http.get(this.url + '/productosEmpresa/' + idEmpresa, { headers: this.headersVariable })
 }
 
 
