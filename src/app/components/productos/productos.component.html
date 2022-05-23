@@ -1,12 +1,17 @@
 
 <div class="container"  >
   <br>
+  <div class="input-group mb-3">
+    <input [(ngModel)]="search" name="search" type="text" class="form-control" placeholder="Buscar Producto" aria-label="Recipient's username" aria-describedby="basic-addon2">
+    <span class="input-group-text" id="basic-addon2">Buscar</span>
+  </div>
   
   <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modalAgregarProducto">
     Agregar Producto
   </button>
   <br>
-  <br>
+  
+  <hr>
   
 <table class="table" >
     <thead>
@@ -23,7 +28,7 @@
         
       </tr>
     </thead>
-    <tbody *ngFor="let prod of productoModelGet">
+    <tbody *ngFor="let prod of productoModelGet | search:search">
       
         <th scope="row">{{ prod._id }}</th>
         <td>{{prod.nombreProducto}}</td>
@@ -67,11 +72,11 @@
             <input type="number" class="form-control" id="inputStock" name="stock" #stock="ngModel"
             [(ngModel)]="productoModelPost.stock">
           </div>
-          <div class="mb-3">
+          <!--<div class="mb-3">
             <label for="inputIdEmpresa" class="form-label">ID Empresa</label>
             <input type="text" class="form-control" id="inputIdEmpresa" name="idEmpresa" #idEmpresa="ngModel"
             [(ngModel)]="productoModelPost.idEmpresa">
-          </div>
+          </div>-->
          
         </form>
       </div>

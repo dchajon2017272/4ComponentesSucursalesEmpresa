@@ -15,6 +15,7 @@ export class ProductosSucursalesComponent implements OnInit {
   public productoSucursalModelGetId: ProductosSucursales;
   public productoSucursalModelPost: ProductosSucursales;
   public token;
+  public search;
 
   constructor(private _productosSucursalesService: ProductosSucursalesService,
     private _empresasServices: EmpresasService) { 
@@ -93,6 +94,19 @@ export class ProductosSucursalesComponent implements OnInit {
     )
   }
 
+
+  deleteProductosSucursales(idEmpresa) {
+    this._productosSucursalesService.eliminarProductosSucursales(idEmpresa).subscribe(
+      (response)=>{
+        console.log(response);
+        this.getProductosSucursales();
+      },
+      (error)=>{
+        console.log(<any>error);
+
+      }
+    )
+  }
 
   chartOptions = {
     responsive: true,

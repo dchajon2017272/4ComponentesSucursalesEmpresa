@@ -19,6 +19,7 @@ import { ActualizarUsuarioComponent } from './components/actualizar-usuario/actu
 import { VerSucursalesComponent } from './components/ver-sucursales/ver-sucursales.component';
 import { ProductosSucursalesComponent } from './components/productos-sucursales/productos-sucursales.component';
 import { GraficaComponent } from './components/grafica/grafica.component';
+import { SearchPipe } from './pipes/search.pipe';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { GraficaComponent } from './components/grafica/grafica.component';
     VerSucursalesComponent,
     ProductosSucursalesComponent,
     GraficaComponent,
+    SearchPipe,
 
 
   ],

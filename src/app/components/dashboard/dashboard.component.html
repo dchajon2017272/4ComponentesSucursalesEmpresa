@@ -127,7 +127,7 @@
   <div class="modal-dialog">
     <div class="modal-content">
       <div class="modal-header">
-        <h5 class="modal-title" id="exampleModalLabel">Agregar Producto</h5>
+        <h5 class="modal-title" id="exampleModalLabel">Agregar Empresa</h5>
         <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
       </div>
       <div class="modal-body">
@@ -142,16 +142,17 @@
             <input type="text" class="form-control" id="inputEmail" name="email" #email="ngModel"
             [(ngModel)]="empresaModelPost.email">
           </div>
+          <div class="mb-3">
+            <label for="inputPassword" class="form-label">Password</label>
+            <input type="text" class="form-control" id="inputPassword" name="password" #password="ngModel"
+            [(ngModel)]="empresaModelPost.password">
+          </div>
           <!--<div class="mb-3">
             <label for="inputPassword" class="form-label">Password</label>
             <input type="text" class="form-control" id="inputPassword" name="password" #password="ngModel"
             [(ngModel)]="empresaModelPost.password">
           </div>-->
-          <div class="mb-3">
-            <label for="inputRol" class="form-label">Rol</label>
-            <input type="text" class="form-control" id="inputRol" name="rol" #rol="ngModel"
-            [(ngModel)]="empresaModelPost.rol">
-          </div>
+          
           <div class="mb-3">
             <label for="inputTipoEmpresa" class="form-label">Tipo de Empresa</label>
             <input type="text" class="form-control" id="inputTipoEmpresa" name="_tipoEmpresa" #tipoEmpresa="ngModel"
@@ -190,11 +191,7 @@
         <input type="text" class="form-control" id="inputPassword" name="password" #password="ngModel"
         [(ngModel)]="empresaModelGetId.password">
       </div>-->
-      <div class="mb-3">
-        <label for="inputRol" class="form-label">Rol</label>
-        <input type="text" class="form-control" id="inputRol" name="rol" #rol="ngModel"
-        [(ngModel)]="empresaModelGetId.rol">
-      </div>
+      
       <div class="mb-3">
         <label for="inputTipoEmpresa" class="form-label">Tipo de Empresa</label>
         <input type="text" class="form-control" id="inputTipoEmpresa" name="tipoEmpresa" #tipoEmpresa="ngModel"

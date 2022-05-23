@@ -20,6 +20,7 @@ export class ProductosComponent implements OnInit {
   public productoModelGetId: Productos;
   public sucursalModelPost: Sucursales;
   public token;
+  public search;
 
   constructor(private _productosService: ProductosService, 
   private _productosSucursalesService: ProductosSucursalesService) { 
