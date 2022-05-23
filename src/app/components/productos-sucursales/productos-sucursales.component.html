@@ -1,6 +1,9 @@
 <div class="container"  >
     <br>
-    
+    <div class="input-group mb-3">
+      <input [(ngModel)]="search" name="search" type="text" class="form-control" placeholder="Buscar Producto" aria-label="Recipient's username" aria-describedby="basic-addon2">
+      <span class="input-group-text" id="basic-addon2">Buscar</span>
+    </div>
    
     <br>
     <br>
@@ -25,13 +28,13 @@
           
         </tr>
       </thead>
-      <tbody *ngFor="let prod of productoSucursalModelGet">
+      <tbody *ngFor="let prod of productoSucursalModelGet | search:search">
         
           <th scope="row">{{ prod._id }}</th>
           <td>{{prod.nombreProducto}}</td>
           <td>{{prod.stockSucursal}}</td>
           <td>{{prod.cantidadVendida}}</td>
-          <td> <button class="btn" type="button"><img src="https://cdn-icons-png.flaticon.com/512/1214/1214594.png" width="50px" height="50px" class="imagen" alt="..."></button></td>
+          <td> <button class="btn" type="button" (click)="deleteProductosSucursales(prod._id)"><img src="https://cdn-icons-png.flaticon.com/512/1214/1214594.png" width="50px" height="50px" class="imagen" alt="..."></button></td>
 
           <td>  <button class="btn" type="button" data-bs-toggle="modal" data-bs-target="#modalAgregarProducto" (click)="getProductosSucursalesId(prod._id)">
             <img src="https://cdn-icons-png.flaticon.com/512/263/263142.png" width="50px" height="50px" class="imagen" alt="..."></button>
