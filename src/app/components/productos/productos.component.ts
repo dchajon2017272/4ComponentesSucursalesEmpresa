@@ -1,27 +1,37 @@
 import { Component, OnInit, ViewEncapsulation } from '@angular/core';
 import { Productos } from 'src/app/models/productos.models';
 import { ProductosService } from 'src/app/services/productos.service';
-
+import { ProductosSucursales } from 'src/app/models/productos-sucursales.models';
+import { ProductosSucursalesService } from 'src/app/services/productos-sucursales.service';
+import { Sucursales } from 'src/app/models/sucursales.models';
 @Component({
   selector: 'app-productos',
   templateUrl: './productos.component.html',
   styleUrls: ['./productos.component.scss'],
-  providers: [ProductosService]
+  providers: [ProductosService, ProductosSucursalesService]
 
 })
 export class ProductosComponent implements OnInit {
 
   public productoModelGet: Productos;
+  public productoSucursalModelGet: ProductosSucursales;
   public productoModelPost: Productos;
+  public productoSucursalModelPost: ProductosSucursales;
   public productoModelGetId: Productos;
+  public sucursalModelPost: Sucursales;
   public token;
 
-  constructor(private _productosService: ProductosService) { 
+  constructor(private _productosService: ProductosService, 
+  private _productosSucursalesService: ProductosSucursalesService) { 
     this.productoModelPost = new Productos('','','',0,'');
+    this.sucursalModelPost = new Sucursales('','','','','');
     this.productoModelGetId = new Productos('','','',0,'');
+    this.productoSucursalModelPost = new ProductosSucursales('','',0,0,'','');
+    
     
 
     this.token = this._productosService.obtenerToken();
+    this.token = this._productosSucursalesService.obtenerToken();
 
   }
 
@@ -44,6 +54,22 @@ export class ProductosComponent implements OnInit {
 
   }
 
+  getProductosSucursales() {
+    
+    this._productosSucursalesService.obtenerProductosSucursales(this.token).subscribe(
+      (response)=>{
+        this.productoSucursalModelGet = response.ProductosSucursales;
+        console.log(this.productoSucursalModelGet);
+
+      },
+      (error)=>{
+        console.log(<any>error)
+      }
+    )
+
+  }
+
+
   postProductos(){
     this._productosService.agregarProductos(this.productoModelPost).subscribe(
       (response)=>{
@@ -56,6 +82,22 @@ export class ProductosComponent implements OnInit {
     )
 
   }
+
+  postProductosSucursales(){
+    this._productosSucursalesService.editarProductosSucursales(this.productoSucursalModelPost,this.productoModelGetId).subscribe(
+      (response)=>{
+        console.log(response);
+        this.productoModelGetId = response.producto;
+        //this.getProductos();
+      },
+      (error)=>{
+        console.log(<any>error);
+      }
+    )
+
+  }
+
+
 
   getProductosId(idProducto){
     this._productosService.obtenerProductosId(idProducto).subscribe(

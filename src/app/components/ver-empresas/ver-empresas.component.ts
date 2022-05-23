@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute } from '@angular/router';
 import { EmpresasService } from 'src/app/services/empresas.service';
+import { Empresa } from 'src/app/models/empresa.models';
 
 
 @Component({
@@ -10,6 +11,10 @@ import { EmpresasService } from 'src/app/services/empresas.service';
   providers: [EmpresasService]
 })
 export class VerEmpresasComponent implements OnInit {
+  empres: any;
+  load: boolean = false; 
+
+  public empresaModelGetId: Empresa;
 
   constructor(
     public _activatedRoute: ActivatedRoute,
@@ -24,14 +29,12 @@ export class VerEmpresasComponent implements OnInit {
   }
 
   getEmpresaId(idEmpresa){
-    this._empresasService.obtenerEmpresaId(idEmpresa).subscribe(
-      (response)=>{
-        console.log(response);
+    this._empresasService.obtenerEmpresaId(idEmpresa).subscribe({
+      next:(response:any)=>{
+        this.empres = response.empresa;
+        this.load = true;
       },
-      (error)=>{
-
-      }
-    )
+      error:(err)=>alert(err.error.mensaje)
+    })
   }
-
 }

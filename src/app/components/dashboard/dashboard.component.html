@@ -87,16 +87,18 @@
 
 <div class="container">
   <!-- Button Abrir Modal Agregar Producto -->
-  <button class="btn btn-primary" type="button" data-bs-toggle="modal" data-bs-target="#modalAgregarProducto">
+  <button class="btn btn-danger" type="button" data-bs-toggle="modal" data-bs-target="#modalAgregarProducto">
     Agregar Empresa
   </button>
-
+  <br>
+  <br>
   <div class="row">
     <div class="col-12 col-md-4" *ngFor="let empr of empresaModelGet">
       <div class="card text-center mb-3">
         <div class="card-header">
           {{ empr._id }}
         </div>
+        <img src="https://cdn-icons-png.flaticon.com/512/3061/3061341.png" class="hola" width="200px" height="200px" alt="Empresas" >
         <div class="card-body">
           <h5 class="card-title">{{empr.nombre}}</h5>
           
@@ -104,11 +106,11 @@
             Email: {{empr.email}}
           </p>
           <button type="button" class="btn btn-danger" (click)="deleteEmpresas(empr._id)">Eliminar</button>
-          <button class="btn btn-warning" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
+          <button class="btno btn" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasExample"
             aria-controls="offcanvasExample" (click)="getEmpresaId(empr._id)">
               Editar
             </button>
-            <button type="button" class="btn btn-success" [routerLink]="['/verEmpresas',empr._id]">Ver</button>
+            <button type="button" class="btn btn-danger" [routerLink]="['/verEmpresas',empr._id]">Ver</button>
         </div>
        
       </div>
@@ -140,11 +142,11 @@
             <input type="text" class="form-control" id="inputEmail" name="email" #email="ngModel"
             [(ngModel)]="empresaModelPost.email">
           </div>
-          <div class="mb-3">
+          <!--<div class="mb-3">
             <label for="inputPassword" class="form-label">Password</label>
             <input type="text" class="form-control" id="inputPassword" name="password" #password="ngModel"
             [(ngModel)]="empresaModelPost.password">
-          </div>
+          </div>-->
           <div class="mb-3">
             <label for="inputRol" class="form-label">Rol</label>
             <input type="text" class="form-control" id="inputRol" name="rol" #rol="ngModel"
@@ -183,11 +185,11 @@
         <input type="text" class="form-control" id="inputEmail" name="email" #email="ngModel"
         [(ngModel)]="empresaModelGetId.email">
       </div>
-      <div class="mb-3">
+     <!-- <div class="mb-3">
         <label for="inputPassword" class="form-label">Password</label>
         <input type="text" class="form-control" id="inputPassword" name="password" #password="ngModel"
         [(ngModel)]="empresaModelGetId.password">
-      </div>
+      </div>-->
       <div class="mb-3">
         <label for="inputRol" class="form-label">Rol</label>
         <input type="text" class="form-control" id="inputRol" name="rol" #rol="ngModel"

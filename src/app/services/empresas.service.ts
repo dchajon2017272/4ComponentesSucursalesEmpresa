@@ -2,12 +2,18 @@ import { Injectable } from '@angular/core';
 import { HttpClient, HttpHeaders}from '@angular/common/http';
 import { Observable } from 'rxjs';
 import { Empresa } from '../models/empresa.models';
+import { environment } from 'src/environments/environment';
 @Injectable({
   providedIn: 'root'
 })
 export class EmpresasService {
   public url: String = 'http://localhost:3000/api';
   public headersVariable = new HttpHeaders().set('Content-Type', 'application/json');
+  public headersToken = new HttpHeaders({
+    'Content-Type': 'application/json',
+    'Authorization': this.obtenerToken()
+  })
+  
   public identidad;
   public token;
 
@@ -22,6 +28,14 @@ export class EmpresasService {
     let params = JSON.stringify(empresa);
 
     return this._http.post(this.url + '/login', params, {headers: this.headersVariable});
+  }
+
+  register(params){
+    return this._http.post(environment.apiURL + '/agregarEmpresas', params, {headers:this.headersVariable})
+  }
+
+  updateUser(params, id){
+    return this._http.put(environment.apiURL + '/editarEmpresa/' + id, params, {headers:this.headersToken})
   }
 
   obtenerToken(){
@@ -66,10 +80,10 @@ export class EmpresasService {
   }
 
 
-  editarEmpresa(modeloEmpresa: Empresa): Observable<any> {
+  editarEmpresaAdmin(modeloEmpresa: Empresa): Observable<any> {
     let parametros = JSON.stringify(modeloEmpresa);
 
-    return this._http.put(this.url + '/editarEmpresa/' + modeloEmpresa._id, parametros, {headers: this.headersVariable})
+    return this._http.put(this.url + '/editarEmpresaAdmin/' + modeloEmpresa._id, parametros, {headers: this.headersVariable})
   }
 
   eliminarEmpresa(id : String): Observable<any> {

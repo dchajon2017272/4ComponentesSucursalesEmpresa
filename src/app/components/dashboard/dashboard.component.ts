@@ -76,7 +76,7 @@ export class DashboardComponent implements OnInit {
   
 
   putEmpresas(){
-    this._empresaService.editarEmpresa(this.empresaModelGetId).subscribe(
+    this._empresaService.editarEmpresaAdmin(this.empresaModelGetId).subscribe(
       (response)=>{
         
         console.log(response);
